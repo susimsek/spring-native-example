@@ -7,10 +7,28 @@ server:
     include-message: always
     include-stacktrace: never
 
+
 logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
 
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: always
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+springdoc:
+  swagger-ui:
+    display-request-duration: true
+    operations-sorter: alpha
+    tagsSorter: alpha
 api-docs:
   description: Documentation Organization API
   license-url: http://springdoc.org
@@ -18,6 +36,7 @@ api-docs:
   version: 1.0
   terms-of-service-url: http://swagger.io/terms/
   license: Apache 2.0
+
 
 spring:
   jackson:
@@ -30,9 +49,5 @@ spring:
     open-in-view: false
     hibernate:
       ddl-auto: update
-springdoc:
-  swagger-ui:
-    display-request-duration: true
-    operations-sorter: alpha
-    tagsSorter: alpha
+
 
