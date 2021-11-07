@@ -52,7 +52,7 @@ docker-compose up -d
 
 ### Swagger
 
-You can access the swagger ui from the following url.
+Swagger ui can be accessed from the following url
 
 http://localhost:9090/swagger-ui.html
 
@@ -79,7 +79,7 @@ helm upgrade --install spring-native-example helm-chart/spring-native-example
 
 ### Swagger
 
-You can access the swagger ui from the following url.
+Swagger ui can be accessed from the following url
 
 http://susimsek.github.io/swagger-ui.html
 
