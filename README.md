@@ -21,6 +21,20 @@ mvn spring-boot:build-image
 docker-compose up -d 
 ```
 
+## Installation for Kubernetes Deployment
+
+<img src="https://github.com/susimsek/spring-native-example/blob/main/images/app-k8s.png" alt="Spring Boot Spring Native Kubernetes Deployment" width="100%" height="100%"/> 
+
+### Prerequisites for Kubernetes Deployment
+
+* Kubernetes 1.12+
+* Helm 3.x
+* PV provisioner support in the underlying infrastructure
+
+```sh
+helm upgrade --install spring-native-example helm-chart/spring-native-example
+```
+
 ## Used Technologies
 
 * Spring Boot

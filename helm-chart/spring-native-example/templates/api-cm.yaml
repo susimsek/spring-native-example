@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "app.shortname" . }}-api-configmap
+  labels:
+  {{- include "api.labels" . | nindent 4 }}
+data:
+  # The JAVA_OPTS defined in the values.yaml file for the "api" are set here using proper quotes
+  {{- if .Values.api.environment }}
+  {{- range $key, $val := .Values.api.environment }}
+  {{ $key }}: {{ $val | quote }}
+  {{- end }}
+  {{- end }}
+  SERVER_PORT: "9090"
+  SPRING_DATASOURCE_URL: "jdbc:h2:mem:employee"
+  SPRING_DATASOURCE_USERNAME: "sa"
+  SPRING_DATASOURCE_PASSWORD: "password"
