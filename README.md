@@ -23,6 +23,14 @@ mvn spring-boot:build-image
 docker-compose up -d 
 ```
 
+### Swagger
+
+You can access the swagger ui from the following url.
+
+http://localhost:9090/swagger-ui.html
+
+<img src="https://github.com/susimsek/spring-native-example/blob/main/images/swagger.png" alt="Swagger Documentation" width="100%" height="100%"/>
+
 ## Installation for Kubernetes Deployment
 
 <img src="https://github.com/susimsek/spring-native-example/blob/main/images/app-k8s.png" alt="Spring Boot Spring Native Kubernetes Deployment" width="100%" height="100%"/> 
@@ -40,9 +48,13 @@ docker-compose up -d
 helm upgrade --install spring-native-example helm-chart/spring-native-example
 ```
 
+### Swagger
+
 You can access the swagger ui from the following url.
 
 http://susimsek.github.io/swagger-ui.html
+
+<img src="https://github.com/susimsek/spring-native-example/blob/main/images/swagger.png" alt="Swagger Documentation" width="100%" height="100%"/>
 
 ## Used Technologies
 
@@ -65,11 +77,3 @@ http://susimsek.github.io/swagger-ui.html
 * SpringDoc Openapi Ui
 * Lombok
 * H2
-
-## Swagger Support
-
-You can access the swagger ui from the following url.  
-
-http://localhost:9090/swagger-ui.html
-
-<img src="https://github.com/susimsek/spring-native-example/blob/main/images/swagger.png" alt="Swagger Documentation" width="100%" height="100%"/>
