@@ -13,7 +13,7 @@ api:
     maxReplicas: 11
     targetCPU: 50
     targetMemory: 50
-  replicaCount: 1
+  replicaCount: 2
   containerPorts:
     http: 9090
   image:
@@ -42,7 +42,7 @@ api:
       cpu: 128m
       memory: 256Mi
   livenessProbe:
-    enabled: fakl
+    enabled: true
     httpGet:
       path: /actuator/health/liveness
       port: http

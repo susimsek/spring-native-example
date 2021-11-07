@@ -4,7 +4,32 @@ Spring Native provides support for compiling Spring applications to native execu
   
 <img src="https://github.com/susimsek/spring-native-example/blob/main/images/spring-native-example.png" alt="Spring Boot Spring Native Example" width="100%" height="100%"/> 
 
+## Build the native Application
+
+### Prerequisites
+
+* Java 11.0.13
+* GraalVM CE 21.3.0
+* Maven 3.x
+
+### Build
+
+The native application can be built as follows:
+
+```sh
+mvn -Pnative -DskipTests package
+```
+
 ## Build Docker Image
+
+### Prerequisites
+
+* Docker 19.03+
+* Maven 3.x
+
+### Build
+
+The docker image of native application can be built as follows:
 
 ```sh
 mvn spring-boot:build-image
