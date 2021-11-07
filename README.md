@@ -44,6 +44,8 @@ mvn spring-boot:build-image
 
 ### Installation
 
+The native application can be installed as follows:
+
 ```sh
 docker-compose up -d 
 ```
@@ -68,6 +70,8 @@ http://localhost:9090/swagger-ui.html
 * PV provisioner support in the underlying infrastructure
 
 ### Installation
+
+The native application can be installed as follows:
 
 ```sh
 helm upgrade --install spring-native-example helm-chart/spring-native-example
