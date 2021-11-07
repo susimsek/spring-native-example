@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  api:
+    image: suayb/spring-native-example:1.0.0
+    container_name: api
+    networks:
+      - back-tier
+    labels:
+      service: organization
+    environment:
+      - SERVER_PORT=9090
+      - SPRING_DATASOURCE_URL=jdbc:h2:mem:employee
+      - SPRING_DATASOURCE_USERNAME=sa
+      - SPRING_DATASOURCE_PASSWORD=password
+    ports:
+      - "9090:9090"
+
+networks:
+  back-tier:
+    name: back-tier
