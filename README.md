@@ -4,18 +4,20 @@ Spring Native provides support for compiling Spring applications to native execu
   
 <img src="https://github.com/susimsek/spring-native-example/blob/main/images/spring-native-example.png" alt="Spring Boot Spring Native Example" width="100%" height="100%"/> 
 
-## Prerequisites
-
-* Docker 19.03+
-* Docker Compose 1.25+
-
 ## Build Docker Image
 
 ```sh
 mvn spring-boot:build-image
 ```
 
-## Installation
+## Installation for Docker Compose Deployment
+
+### Prerequisites
+
+* Docker 19.03+
+* Docker Compose 1.25+
+
+### Installation
 
 ```sh
 docker-compose up -d 
@@ -29,11 +31,18 @@ docker-compose up -d
 
 * Kubernetes 1.12+
 * Helm 3.x
+* Ingress Controller
 * PV provisioner support in the underlying infrastructure
+
+### Installation
 
 ```sh
 helm upgrade --install spring-native-example helm-chart/spring-native-example
 ```
+
+You can access the swagger ui from the following url.
+
+http://susimsek.github.io/swagger-ui.html
 
 ## Used Technologies
 
